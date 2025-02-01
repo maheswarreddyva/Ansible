@@ -3,8 +3,6 @@
   become: yes
   tasks:
     - name: ls
-      ansible.builtin.shell: "rm nginx.yaml"
-    - name: ls
       ansible.builtin.shell: "ls "
       register: info
     - name: print
