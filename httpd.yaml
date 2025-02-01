@@ -3,7 +3,7 @@
   hosts: all
   # vars: 
   #   - name: Nandi
-  vars_file:
+  vars_files:
     - ~/Ansible/test_vars.yaml
   become: yes
   tasks:
