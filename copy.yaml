@@ -10,7 +10,7 @@
         msg: "before: {{info}}" 
     - name: copy file
       ansible.builtin.copy:
-        src: ~/ngix.yaml
+        src: /home/ansible/Ansible/ngix.yaml
         dest: ~/
     - name: ls
       ansible.builtin.shell: "ls -la"
