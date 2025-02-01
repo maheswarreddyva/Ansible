@@ -5,7 +5,7 @@
   tasks:
     - name: create a file
       ansible.builtin.file:
-        path: ~/file.txt
+        path: /home/ec2-user/file.txt
         state: touch
         owner: root
         group: root
