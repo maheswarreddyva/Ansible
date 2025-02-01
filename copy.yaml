@@ -2,6 +2,12 @@
   hosts: all
   become: yes
   tasks:
+    - name: ls
+      ansible.builtin.shell: "ls -la"
+      register: info
+    - name: print
+      ansible.builtin.debug:
+        msg: "before: {{info}}" 
     - name: copy file
       ansible.builtin.copy:
         src: ~/ngix.yaml
