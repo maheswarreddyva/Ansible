@@ -6,5 +6,5 @@
   tasks:
     - name: copy file
       ansible.builtin.template:
-        src: ~/temp.txt
+        src: ~/Ansible/temp.txt
         dest: ~/
