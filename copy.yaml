@@ -7,13 +7,13 @@
       ignore_errors: yes
     - name: ls
       ansible.builtin.shell: "pwd"
-      ignore_errors: yes
+      register: pwd
     - name: ls
       ansible.builtin.shell: "ls ~/"
       register: info
     - name: print
       ansible.builtin.debug:
-        msg: "before: {{info}}" 
+        msg: "before: {{info}} pwd: {{pwd}}" 
     - name: copy file
       ansible.builtin.copy:
         src: /home/ansible/Ansible/nginx.yaml
