@@ -1,6 +1,8 @@
 ---
 - name: httpd
   hosts: all
+  vars: 
+    - name: Nandi
   become: yes
   tasks:
     - name: install httpd
@@ -12,4 +14,7 @@
         name: httpd
         state: started
         enabled: yes
-    
+    - name: copy html
+      ansible.builtin.template:
+        src: ~/Ansible/index.html
+        dest: /var/www/html/
