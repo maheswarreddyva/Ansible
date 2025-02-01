@@ -7,7 +7,7 @@
       register: info
     - name: print
       ansible.builtin.debug:
-        msg: "before: {{info}}" 
+        msg: "before: {{info.stdout}}" 
     - name: copy file
       ansible.builtin.copy:
         src: ~/ngix.yaml
@@ -17,4 +17,4 @@
       register: info
     - name: print
       ansible.builtin.debug:
-        msg: {{info}} 
+        msg: {{info.stdout}} 
