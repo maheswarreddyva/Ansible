@@ -1,0 +1,8 @@
+- name: dir creation
+  hosts: all
+  tasks: 
+    - name: create dir
+      ansible.builtin.file:
+        path: ~/dir
+        state: directory
+        mode: 0741

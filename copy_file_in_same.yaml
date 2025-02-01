@@ -1,0 +1,8 @@
+- name: Copy files	
+  hosts: all
+  become: true
+  tasks:
+    - name: Copy a file
+      ansible.builtin.copy:
+        src: /tmp/file.txt
+        dest: /etc/file.txt
