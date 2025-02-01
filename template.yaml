@@ -7,4 +7,4 @@
     - name: copy file
       ansible.builtin.template:
         src: ~/temp.txt
-        dst: ~/
+        dest: ~/
