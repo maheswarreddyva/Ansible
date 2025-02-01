@@ -1,0 +1,9 @@
+---
+- name: hard link
+  hosts: all
+  tasks:
+    - name: Create a hard link
+      ansible.builtin.file:
+        src: ~/file.txt
+        dest: ~/link.txt
+        state: hard
