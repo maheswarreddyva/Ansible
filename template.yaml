@@ -1,0 +1,10 @@
+---
+- name: copy the file
+  hosts: all
+  vars:
+    - name: john
+  tasks:
+    - name: copy file
+      ansible.builtin.template:
+        src: ~/temp.txt
+        dst: ~/
