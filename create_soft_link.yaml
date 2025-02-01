@@ -3,6 +3,6 @@
   tasks:
     - name: create a soft link
       ansible.builtin.file:
-      src: ~/file.txt
-      dest: ~/file2.txt
-      state: link
+        src: ~/file.txt
+        dest: ~/file2.txt
+        state: link
