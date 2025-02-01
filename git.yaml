@@ -1,0 +1,20 @@
+---
+- name: install git
+  hosts: all
+  become: yes
+  tasks:
+    - name: install git
+      ansible.builtin.dnf:
+        name: git
+        state: latest
+
+- name: check git
+  hosts: all
+  tasks:
+    - name: verify git
+      ansible.builtin.shell: "git --version"
+      register: gitversion
+
+    - name: print version
+      ansible.builtin.debug:
+        msg: "git version: {{gitversion}}"
