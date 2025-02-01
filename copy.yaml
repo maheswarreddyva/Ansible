@@ -3,6 +3,12 @@
   become: yes
   tasks:
     - name: ls
+      ansible.builtin.shell: "rm ~/n*"
+      ignore_errors: yes
+    - name: ls
+      ansible.builtin.shell: "pwd"
+      ignore_errors: yes
+    - name: ls
       ansible.builtin.shell: "ls ~/"
       register: info
     - name: print
