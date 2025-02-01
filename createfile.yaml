@@ -6,4 +6,6 @@
       ansible.builtin.file:
         path: ~/file.txt
         state: touch
+        owner: root
+        group: root
         mode: "0777"
