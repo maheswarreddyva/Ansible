@@ -6,4 +6,4 @@
       ansible.debug.file:
         path: ~/file.txt
         state: touch
-        mode: 0777
+        mode: "0777"
