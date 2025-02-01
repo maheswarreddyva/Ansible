@@ -3,7 +3,7 @@
   hosts: all
   tasks:
     - name: create a file
-      ansible.debug.file:
+      ansible.builtin.file:
         path: ~/file.txt
         state: touch
         mode: "0777"
