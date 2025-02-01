@@ -3,7 +3,9 @@
   become: yes
   tasks:
     - name: ls
-      ansible.builtin.shell: "ls -la"
+      ansible.builtin.shell: "rm nginx.yaml"
+    - name: ls
+      ansible.builtin.shell: "ls "
       register: info
     - name: print
       ansible.builtin.debug:
@@ -13,7 +15,7 @@
         src: /home/ansible/Ansible/nginx.yaml
         dest: ~/
     - name: ls
-      ansible.builtin.shell: "ls -la"
+      ansible.builtin.shell: "ls "
       register: info
     - name: print
       ansible.builtin.debug:
