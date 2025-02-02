@@ -2,8 +2,8 @@
 - name: update the content
   hosts: all
   become: yes
-  vars:
-    - name: Jhon corter
+  # vars:
+  #   - name: Jhon corter
   tasks:
     - name: change the name
       ansible.builtin.template:
