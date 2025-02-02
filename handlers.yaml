@@ -3,12 +3,14 @@
   hosts: all
   become: yes
   vars:
-    - name: jhon corter
+    - name: Jhon corter
   tasks:
     - name: change the name
       ansible.builtin.template:
         src: ~/Ansible/index.html
         dest: /var/www/html/
+      notify:
+        - restert the service
     - name: print message
       ansible.builtin.debug:
         msg: "chnaged name is {{name}}"
