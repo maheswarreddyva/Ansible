@@ -1,0 +1,18 @@
+- name: print messages
+  hosts: all
+  tasks:
+    - name: print Jhon
+      ansible.builtin.debug:
+        msg: "Name is John"
+      tags:
+        - John
+    - name: print Raj
+      ansible.builtin.debug:
+        msg: "Name is Raj"
+      tags:
+        - Raj
+    - name: print both
+      ansible.builtin.debug:
+        msg: "Name is John and Raj"
+      tags:
+        - both
