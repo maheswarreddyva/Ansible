@@ -1,0 +1,21 @@
+---
+- name: update the content
+  hosts: all
+  become: yes
+  vars:
+    - name: jhon corter
+  tasks:
+    - name: change the name
+      ansible.builtin.template:
+        src: ~/Ansible/index.html
+        dest: /var/www/html/
+    - name: print message
+      ansible.builtin.debug:
+        msg: "chnaged name is {{name}}"
+
+  handlers:
+    - name: restert the service
+      ansible.builtin.service:
+        name: httpd
+        state: restarted
+
