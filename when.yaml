@@ -1,0 +1,16 @@
+- name: print messages
+  hosts: all
+  tasks:
+    - name: print Jhon
+      ansible.builtin.debug:
+        msg: "Name is John"
+      when:
+        1 == 1
+    - name: print Raj
+      ansible.builtin.debug:
+        msg: "Name is Raj"
+      when:
+        1 == 2
+    - name: print both
+      ansible.builtin.debug:
+        msg: "Name is John and Raj"
